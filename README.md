@@ -1,9 +1,8 @@
 # 徐崇皓 | 個人頁面
 
 > 一個現代化的個人作品集網站，包含即時時鐘、技能展示與作品集介紹。
+> ---
 > ![Uploading image.png…]()
-
-
 🌐 **線上預覽**：[https://andy89061842-lab.github.io/DIC--1/](https://andy89061842-lab.github.io/DIC--1/)
 
 ---
