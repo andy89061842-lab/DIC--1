@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Page</title>
+  <meta name="description" content="A modern personal page featuring profile, skills, projects, and a live clock." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Dev<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#clock">Clock</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO / PROFILE ===== -->
+  <section id="profile" class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring"></div>
+        <div class="avatar-container">
+          <img src="https://api.dicebear.com/8.x/bottts/svg?seed=PersonalPage&backgroundColor=0a0a1a" alt="Avatar" class="avatar-img" id="avatar-img" />
+        </div>
+        <div class="avatar-status"></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, World! 👋</p>
+        <h1 class="hero-name" id="hero-name">Your Name</h1>
+        <p class="hero-dept" id="hero-dept">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Department / Major</span>
+        </p>
+        <p class="hero-bio" id="hero-bio">
+          A passionate developer who loves building elegant solutions to complex problems.
+          Always curious, always learning — from web development to AI and beyond.
+        </p>
+        <div class="hero-badges">
+          <span class="badge"><i class="fas fa-map-marker-alt"></i> Taiwan</span>
+          <span class="badge"><i class="fas fa-briefcase"></i> Open to Work</span>
+          <span class="badge"><i class="fas fa-code"></i> Full-Stack Dev</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-folder-open"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <p>Scroll to explore</p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-sub">A toolkit built through curiosity, projects, and hands-on experience.</p>
+      </div>
+
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="language">Languages</button>
+        <button class="filter-btn" data-filter="framework">Frameworks</button>
+        <button class="filter-btn" data-filter="tool">Tools &amp; AI</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Language -->
+        <div class="skill-card" data-category="language">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3>Python</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:90%"></div></div>
+          <span class="skill-label">90%</span>
+        </div>
+        <div class="skill-card" data-category="language">
+          <div class="skill-icon" style="--ic:#00599C"><i class="fas fa-copyright"></i></div>
+          <h3>C / C++</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:75%"></div></div>
+          <span class="skill-label">75%</span>
+        </div>
+        <div class="skill-card" data-category="language">
+          <div class="skill-icon" style="--ic:#F7DF1E"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:80%"></div></div>
+          <span class="skill-label">80%</span>
+        </div>
+        <!-- Framework -->
+        <div class="skill-card" data-category="framework">
+          <div class="skill-icon" style="--ic:#61DAFB"><i class="fab fa-react"></i></div>
+          <h3>Web Development</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:78%"></div></div>
+          <span class="skill-label">78%</span>
+        </div>
+        <div class="skill-card" data-category="framework">
+          <div class="skill-icon" style="--ic:#FF6B35"><i class="fas fa-robot"></i></div>
+          <h3>Machine Learning</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:72%"></div></div>
+          <span class="skill-label">72%</span>
+        </div>
+        <!-- Tool / AI -->
+        <div class="skill-card" data-category="tool">
+          <div class="skill-icon" style="--ic:#A855F7"><i class="fas fa-brain"></i></div>
+          <h3>AI / LLM</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:68%"></div></div>
+          <span class="skill-label">68%</span>
+        </div>
+        <div class="skill-card" data-category="tool">
+          <div class="skill-icon" style="--ic:#22C55E"><i class="fas fa-microchip"></i></div>
+          <h3>IoT</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
+          <span class="skill-label">65%</span>
+        </div>
+        <div class="skill-card" data-category="tool">
+          <div class="skill-icon" style="--ic:#38BDF8"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analysis</h3>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+          <span class="skill-label">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A selection of things I've built with passion and purpose.</p>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card" id="project-1">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-robot"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Chatbot Assistant</h3>
+          <p class="project-desc">
+            A conversational AI built with Python and OpenAI API, featuring context memory,
+            multi-turn dialogue, and a clean web interface deployed on GitHub Pages.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-2">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener" class="project-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">IoT Dashboard</h3>
+          <p class="project-desc">
+            Real-time sensor data visualization dashboard using Arduino, MQTT protocol,
+            and a responsive front-end with live charts and alerting system.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">MQTT</span>
+            <span class="tech-tag">Chart.js</span>
+            <span class="tech-tag">IoT</span>
+          </div>
+        </article>
+
+        <article class="project-card" id="project-3">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-database"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Data Analysis Platform</h3>
+          <p class="project-desc">
+            End-to-end data pipeline for processing and visualizing large datasets,
+            using pandas, matplotlib, and scikit-learn for predictive modeling.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">pandas</span>
+            <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">matplotlib</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE CLOCK ===== -->
+  <section id="clock" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Time</span>
+        <h2 class="section-title">Live Clock</h2>
+        <p class="section-sub">Current Taiwan time — updated every second.</p>
+      </div>
+      <div class="clock-wrapper">
+        <!-- Digital Clock -->
+        <div class="clock-digital glass-card">
+          <div class="clock-face">
+            <div class="clock-time" id="clock-time">00:00:00</div>
+            <div class="clock-date" id="clock-date">Wednesday, January 1, 2025</div>
+            <div class="clock-zone"><i class="fas fa-globe-asia"></i> Taiwan Standard Time (UTC+8)</div>
+          </div>
+          <div class="clock-segments">
+            <div class="seg-group">
+              <span class="seg-val" id="seg-h">00</span>
+              <span class="seg-lbl">HOURS</span>
+            </div>
+            <div class="seg-colon">:</div>
+            <div class="seg-group">
+              <span class="seg-val" id="seg-m">00</span>
+              <span class="seg-lbl">MINUTES</span>
+            </div>
+            <div class="seg-colon">:</div>
+            <div class="seg-group">
+              <span class="seg-val" id="seg-s">00</span>
+              <span class="seg-lbl">SECONDS</span>
+            </div>
+          </div>
+        </div>
+        <!-- Analog Clock -->
+        <div class="clock-analog glass-card">
+          <svg class="analog-svg" viewBox="0 0 200 200" id="analog-clock">
+            <!-- Tick marks -->
+            <circle cx="100" cy="100" r="90" class="clock-ring" />
+            <g class="tick-marks" id="tick-marks"></g>
+            <!-- Hands -->
+            <line id="hand-hour"   x1="100" y1="100" x2="100" y2="45"  class="hand hand-hour" />
+            <line id="hand-minute" x1="100" y1="100" x2="100" y2="25"  class="hand hand-minute" />
+            <line id="hand-second" x1="100" y1="110" x2="100" y2="18"  class="hand hand-second" />
+            <circle cx="100" cy="100" r="5" class="hand-center"/>
+            <circle cx="100" cy="100" r="2.5" class="hand-center-dot"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Feel free to reach out — I'm always open to new opportunities!</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:yourname@gmail.com" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email</h3>
+          <p>yourname@gmail.com</p>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <h3>GitHub</h3>
+          <p>github.com/yourname</p>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/yourname</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>
+      <span class="logo-bracket">&lt;</span>Made with <i class="fas fa-heart" style="color:#f43f5e"></i> using Antigravity AI<span class="logo-bracket">/&gt;</span>
+    </p>
+    <p class="footer-sub">© 2025 Your Name · All rights reserved</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
